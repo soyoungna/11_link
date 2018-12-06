@@ -67,7 +67,7 @@ void print_list(void)
 	ndptr = list->next;
 	while(ndptr != NULL)
 	{
-	  printf("%i",ndptr->data);
+	  printf("%i\n",ndptr->data);
 	  ndptr = ndptr->next;	
 	}
 }
