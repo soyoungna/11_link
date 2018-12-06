@@ -7,5 +7,6 @@ typedef struct linknode{
 }linked_t;
 
 
-//struct liked nd;
-linked_t nd;
+static linked_t *list;//linked list ½ÇÃ¼ 
+
+ 
