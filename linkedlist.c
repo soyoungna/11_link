@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct linknode{
@@ -28,3 +29,29 @@ linked_t* create_node(int value){
 	return ndptr;
 	
 } 
+
+
+
+//node 연결 끝에다 연결
+void addTail(int value)
+{
+	linked_t *ndptr, *newptr;
+	
+	if(list == NULL)//첫 node이면 list가 생성한  node를 가리키도록 함 
+	{
+	  return;
+	}
+	else
+	{
+		ndptr = list;
+		while (ndptr->next != NULL){
+			ndptr = ndptr->next;
+		}
+		
+		newptr = create_node(value);
+		ndptr->next = newptr;
+	}
+} 
+
+
+
