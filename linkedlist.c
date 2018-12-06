@@ -60,15 +60,24 @@ void genlist(void)
 	return;
 }
 
-void print_list(void)
+void print_list(int n)
 {
-	linked_t *ndptr;
+    linked_t *ndptr;
+	int i=0;
 	
-	ndptr = list->next;
+     ndptr = (linked_t*)list->next;
 	while(ndptr != NULL)
 	{
-	  printf("%i\n",ndptr->data);
+	  i++;
+	  if(i == n)
+	  {
+	  	printf("%i-th value : %i\n",i,ndptr->data);
+	  	break;
+	  }
+
 	  ndptr = ndptr->next;	
 	}
 }
+
+
 
